@@ -38,12 +38,12 @@ function App() {
   };
 
   useEffect(() => {
-    const todos = JSON.parse(localStorage.getItem("todos"));
+    const todos = JSON.parse(localStorage.getItem("todos")) || [];
 
     if (todos.length > 0) {
       setTodos(todos);
     }
-    console.log("Todos: ", todos);
+    // console.log("Todos: ", todos);
   }, []);
 
   useEffect(() => {
